@@ -1,4 +1,6 @@
-﻿using Quiz_Configurator.Model;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using Quiz_Configurator.Model;
 using System.Collections.ObjectModel;
 
 namespace Quiz_Configurator.Viewmodel
@@ -6,7 +8,17 @@ namespace Quiz_Configurator.Viewmodel
     class QuestionPackViewModel : ViewModelBase
     {
         private readonly QuestionPack _model;
-
+        
+        [BsonId]
+        public ObjectId _id
+        {
+            get => _model._id;
+            set
+            {
+                _model._id = value;
+                RaiseProperyChanged();
+            }
+        }
 
         public string Name
         {

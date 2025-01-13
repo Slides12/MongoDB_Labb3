@@ -1,4 +1,7 @@
-﻿using Quiz_Configurator.Viewmodel;
+﻿using Microsoft.Extensions.Configuration;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using Quiz_Configurator.Viewmodel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,33 +15,53 @@ namespace Quiz_Configurator.Model
 {
     internal class Load
     {
-
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
+        MongoClient mongoClient;
         public async Task<ObservableCollection<QuestionPackViewModel>> LoadData()
         {
-            string directoryPath = Path.Combine(path, "QuizConfigurator");
-            string filePath = Path.Combine(directoryPath, "QuizConfig.json");
+            var config = new ConfigurationBuilder().AddUserSecrets<MainWindowViewModel>().Build();
+            var connectionString = config["ConnectionString"];
+            mongoClient = new MongoClient(connectionString);
+
+            var packCollection = mongoClient.GetDatabase("QuizConfigurator").GetCollection<BsonDocument>("Packs");
             ObservableCollection<QuestionPackViewModel> Packs = new ObservableCollection<QuestionPackViewModel>();
 
-            
 
-            if (Directory.Exists(directoryPath) && File.Exists(filePath))
+
+
+            var bsonPacks = packCollection.AsQueryable().ToList();
+
+            foreach(var bsonDoc in bsonPacks)
             {
-                using (StreamReader sr = new StreamReader(filePath))
-                {
-                    string jsonContent = await sr.ReadToEndAsync();
-                    var questionPacks = JsonSerializer.Deserialize<List<QuestionPack>>(jsonContent);
 
-                if (questionPacks != null)
+                var questions = new ObservableCollection<Question>();
+
+                var qp = new QuestionPackViewModel() { 
+                    _id = new ObjectId(bsonDoc.GetValue("_id").ToString()), 
+                    Difficulty = Enum.Parse<Difficulty>(bsonDoc.GetValue("Difficulty").ToString()),
+                    Name = bsonDoc.GetValue("Name").ToString(),
+                };
+
+                foreach(var question in bsonDoc["Questions"].AsBsonArray)
                 {
-                    foreach (var questionPack in questionPacks)
-                    {
-                        Packs.Add(new QuestionPackViewModel(questionPack));
-                    }
+
+                    var incorrectAnswersArray = question["IncorrectAnswers"].AsBsonArray;
+
+                    var incorrectAnswers = incorrectAnswersArray.Select(a => a.ToString()).ToArray();
+
+                    qp.Questions.Add(new Question() { 
+                        Query = question["Query"].ToString(), 
+                        CorrectAnswer = question["CorrectAnswer"].ToString(),
+                        IncorrectAnswers = incorrectAnswers
+                    });
                 }
-                }
+
+                Packs.Add(qp);
             }
+
+
+
+
+                
 
             return Packs;
         }

@@ -1,5 +1,9 @@
-﻿using Quiz_Configurator.Viewmodel;
+﻿using Microsoft.Extensions.Configuration;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using Quiz_Configurator.Viewmodel;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -13,22 +17,45 @@ namespace Quiz_Configurator.Model
 {
     internal class Save
     {
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-
+        MongoClient mongoClient;
         public async Task SaveData(ObservableCollection<QuestionPackViewModel> Packs)
         {
-            string directoryPath = Path.Combine(path, "QuizConfigurator");
-            string filePath = Path.Combine(directoryPath, "QuizConfig.json");
+            var config = new ConfigurationBuilder().AddUserSecrets<MainWindowViewModel>().Build();
+            var connectionString = config["ConnectionString"];
+            mongoClient = new MongoClient(connectionString);
 
-        if (!Directory.Exists(directoryPath))
-        {
-            Directory.CreateDirectory(directoryPath);
-        }
+            var packCollection = mongoClient.GetDatabase("QuizConfigurator").GetCollection<BsonDocument>("Packs");
 
-            using (StreamWriter sw = new StreamWriter(filePath))
+
+            foreach (var pack in Packs)
             {
-                string json = JsonSerializer.Serialize(Packs);
-                await sw.WriteAsync(json);
+                var questionArray = new BsonArray();
+
+                foreach (var question in pack.Questions)
+                {
+                    
+                    var questionDoc = new BsonDocument
+                    {
+                        { "Query", question.Query },
+                        { "CorrectAnswer", question.CorrectAnswer },
+                        { "IncorrectAnswers", new BsonArray{ question.IncorrectAnswers[0], question.IncorrectAnswers[1], question.IncorrectAnswers[2] } }
+                    };
+                    questionArray.Add(questionDoc);
+                }
+
+
+                var doc = new BsonDocument
+                {
+                    { "_id", pack._id },
+                    { "Name", pack.Name },
+                    { "Difficulty", pack.Difficulty },
+                    { "Questions", questionArray }
+                };
+
+
+                var filter = Builders<BsonDocument>.Filter.Eq("_id", pack._id);
+                var options = new ReplaceOptions { IsUpsert = true };
+                await packCollection.ReplaceOneAsync(filter, doc, options);
             }
         }
     }

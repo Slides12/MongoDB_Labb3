@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <UserSecretsId>51650381-f4a0-49e4-8f6e-de9375ef6097</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +16,8 @@
 
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
