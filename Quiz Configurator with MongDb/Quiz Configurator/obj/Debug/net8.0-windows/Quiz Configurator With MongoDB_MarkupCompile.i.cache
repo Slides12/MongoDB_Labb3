@@ -16,5 +16,5 @@ C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Co
 2081848534375
 MainWindow.xaml;View\ConfigurationView.xaml;View\EndScreen.xaml;View\HighscoreView.xaml;View\MenuView.xaml;View\PlayerView.xaml;View\UserNameView.xaml;Windows\CreateNewPackDialog.xaml;Windows\ImportQuestions.xaml;Windows\PackOptionsDialog.xaml;
 
-True
+False
 

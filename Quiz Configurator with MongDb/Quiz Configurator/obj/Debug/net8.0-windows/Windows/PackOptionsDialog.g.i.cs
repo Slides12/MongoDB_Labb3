@@ -70,8 +70,7 @@ namespace Quiz_Configurator.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz Configurator With MongoDB;V1.0.0.0;component/windows/packoptionsdialog.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz Configurator With MongoDB;component/windows/packoptionsdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Windows\PackOptionsDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

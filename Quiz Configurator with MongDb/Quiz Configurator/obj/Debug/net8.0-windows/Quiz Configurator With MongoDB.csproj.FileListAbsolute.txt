@@ -1,0 +1,44 @@
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Quiz Configurator With MongoDB.exe
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Quiz Configurator With MongoDB.deps.json
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Quiz Configurator With MongoDB.runtimeconfig.json
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Quiz Configurator With MongoDB.dll
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Quiz Configurator With MongoDB.pdb
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.csproj.AssemblyReference.cache
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\ConfigurationView.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\EndScreen.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\HighscoreView.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\MenuView.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\PlayerView.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\UserNameView.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\CreateNewPackDialog.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\ImportQuestions.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\PackOptionsDialog.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB_MarkupCompile.cache
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB_MarkupCompile.lref
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\App.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\ConfigurationView.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\EndScreen.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\HighscoreView.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\MenuView.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\PlayerView.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\View\UserNameView.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\CreateNewPackDialog.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\ImportQuestions.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\PackOptionsDialog.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.g.resources
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.AssemblyInfoInputs.cache
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.AssemblyInfo.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.sourcelink.json
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Con.0524C6C0.Up2Date
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.dll
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\refint\Quiz Configurator With MongoDB.dll
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.pdb
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Quiz Configurator With MongoDB.genruntimeconfig.cache
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\ref\Quiz Configurator With MongoDB.dll

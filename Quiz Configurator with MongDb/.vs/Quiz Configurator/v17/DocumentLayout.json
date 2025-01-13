@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\highscoreview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|solutionrelative:quiz configurator\\view\\highscoreview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\highscoreview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\view\\highscoreview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|solutionrelative:quiz configurator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:1:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\highscoreview.xaml||{8D42AE58-4628-4780-AC3C-6B7E6DE7A92A}|",
+      "RelativeMoniker": "D:1:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\view\\highscoreview.xaml||{8D42AE58-4628-4780-AC3C-6B7E6DE7A92A}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\usernameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|solutionrelative:quiz configurator\\view\\usernameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\endscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator.csproj|solutionrelative:quiz configurator\\view\\endscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\usernameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\view\\usernameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\highscoreview.xaml||{8D42AE58-4628-4780-AC3C-6B7E6DE7A92A}|",
-      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\view\\highscoreview.xaml||{8D42AE58-4628-4780-AC3C-6B7E6DE7A92A}|"
+      "AbsoluteMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|c:\\users\\daniel\\source\\repos\\mongodb_labb3\\quiz configurator with mongdb\\quiz configurator\\view\\endscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CE49176F-694E-41A2-A8D1-7375A0B201C2}|Quiz Configurator\\Quiz Configurator With MongoDB.csproj|solutionrelative:quiz configurator\\view\\endscreen.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "HighscoreView.xaml",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\View\\HighscoreView.xaml",
               "RelativeDocumentMoniker": "Quiz Configurator\\View\\HighscoreView.xaml",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Quiz Configurator\\MainWindow.xaml",
@@ -69,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserNameView.xaml",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\View\\UserNameView.xaml",
               "RelativeDocumentMoniker": "Quiz Configurator\\View\\UserNameView.xaml",
@@ -80,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EndScreen.xaml",
               "DocumentMoniker": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\View\\EndScreen.xaml",
               "RelativeDocumentMoniker": "Quiz Configurator\\View\\EndScreen.xaml",

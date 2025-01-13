@@ -47,11 +47,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel\\source\\repos\\Labb_Three\\Quiz Configurator\\Quiz Configurator\\Quiz Configurator.csproj",
-      "projectName": "Quiz Configurator",
-      "projectPath": "C:\\Users\\Daniel\\source\\repos\\Labb_Three\\Quiz Configurator\\Quiz Configurator\\Quiz Configurator.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\Quiz Configurator With MongoDB.csproj",
+      "projectName": "Quiz Configurator With MongoDB",
+      "projectPath": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\Quiz Configurator With MongoDB.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel\\source\\repos\\Labb_Three\\Quiz Configurator\\Quiz Configurator\\obj\\",
+      "outputPath": "C:\\Users\\Daniel\\source\\repos\\MongoDB_Labb3\\Quiz Configurator with MongDb\\Quiz Configurator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

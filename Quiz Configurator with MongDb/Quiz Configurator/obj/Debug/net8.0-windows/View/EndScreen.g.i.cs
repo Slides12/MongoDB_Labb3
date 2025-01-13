@@ -54,7 +54,7 @@ namespace Quiz_Configurator.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz Configurator With MongoDB;V1.0.0.0;component/view/endscreen.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz Configurator With MongoDB;component/view/endscreen.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\EndScreen.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
