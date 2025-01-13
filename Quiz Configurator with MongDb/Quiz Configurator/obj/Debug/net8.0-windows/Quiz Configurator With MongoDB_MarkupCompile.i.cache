@@ -1,4 +1,4 @@
-﻿Quiz Configurator
+﻿Quiz Configurator With MongoDB
 1.0.0.0
 
 winexe
@@ -12,7 +12,7 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\App.xaml
 10-1534071947
 
-301684766500
+30-1402930453
 2081848534375
 MainWindow.xaml;View\ConfigurationView.xaml;View\EndScreen.xaml;View\HighscoreView.xaml;View\MenuView.xaml;View\PlayerView.xaml;View\UserNameView.xaml;Windows\CreateNewPackDialog.xaml;Windows\ImportQuestions.xaml;Windows\PackOptionsDialog.xaml;
 

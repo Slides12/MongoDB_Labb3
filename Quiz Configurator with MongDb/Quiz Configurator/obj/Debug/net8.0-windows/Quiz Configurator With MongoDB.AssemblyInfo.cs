@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Quiz Configurator")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Quiz Configurator With MongoDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca575a9c1539fcdbc65cd84e25d8824f91151787")]
-[assembly: System.Reflection.AssemblyProductAttribute("Quiz Configurator")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Quiz Configurator")]
+[assembly: System.Reflection.AssemblyProductAttribute("Quiz Configurator With MongoDB")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Quiz Configurator With MongoDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

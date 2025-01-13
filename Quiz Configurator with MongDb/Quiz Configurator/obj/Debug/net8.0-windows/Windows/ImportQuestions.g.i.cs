@@ -70,7 +70,7 @@ namespace Quiz_Configurator.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz Configurator;component/windows/importquestions.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz Configurator With MongoDB;V1.0.0.0;component/windows/importquestions.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Windows\ImportQuestions.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
