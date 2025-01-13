@@ -1,0 +1,142 @@
+﻿<UserControl x:Class="Quiz_Configurator.View.ConfigurationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             DataContext="{Binding ConfigurationViewModel}"
+             xmlns:local="clr-namespace:Quiz_Configurator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!--Grid definitions-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <!--Left Column-->
+        <Label Content="{Binding Path=ActivePack.Name}"
+            FontWeight="Bold"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center"
+            />
+        <StackPanel HorizontalAlignment="Right"
+                 Orientation="Horizontal"
+                 Grid.Row="0">
+
+            <Button Height="15"
+                     Width="15"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     Grid.Row="1"
+                     Margin="5"
+                     Content="{fa:Icon toolbox}"
+                     Command="{Binding PackOptionsCommand}"/>
+            
+            <Button Height="15"
+                     Width="15"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     Grid.Row="1"
+                     Content="{fa:Icon plus}"
+                     Command="{Binding NewQuestionCommand}"/>
+            
+            <Button Height="15"
+                     Width="15"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Center"
+                     Grid.Row="1"
+                     Margin="5"
+                     Content="{fa:Icon minus}"
+                     Command="{Binding DeleteQuestionCommand}"/>
+
+        </StackPanel>
+
+
+        <ListBox ItemsSource="{Binding ActivePack.Questions}"
+                 Grid.Row="1"
+                 Margin="5"
+                 BorderThickness="1"
+                 Grid.RowSpan="9"
+                 SelectedItem="{Binding ActiveQuestion}"
+                 SelectionMode="Extended">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="Question:" 
+                                   FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Query}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+        <!--Right Column-->
+
+
+        <!--Question-->
+
+        <Label Grid.Row="1"
+                    Grid.Column="1"
+                    Content="Question:" 
+                    FontWeight="Bold"
+                    Margin="20 0 "
+               Visibility="{Binding ActiveQuestion, Converter={StaticResource nullToVisibilityConverter}}"/>
+
+        <TextBox x:Name="questionTextBox" 
+                 Grid.Row="2" 
+                 Grid.Column="1"
+              AcceptsReturn="True"
+              Margin="20 0 20 20"
+                 Text="{Binding ActiveQuestion.Query,UpdateSourceTrigger=PropertyChanged}"
+                 Visibility="{Binding ActiveQuestion, Converter={StaticResource nullToVisibilityConverter}}" TextWrapping="Wrap"/>
+
+
+        <!--Answers-->
+
+        <StackPanel Grid.Row="3"
+             Grid.Column="2"
+             Margin="20 0 20 0"
+             Grid.RowSpan="4"
+                    Visibility="{Binding ActiveQuestion, Converter={StaticResource nullToVisibilityConverter}}">
+
+            <StackPanel  >
+                <Label Content="Correct Answer:"
+                 FontWeight="Bold"/>
+                <TextBox Text="{Binding ActiveQuestion.CorrectAnswer}"/>
+            </StackPanel>
+
+            <StackPanel >
+                <Label Content="First Incorrect Answer:"
+                 FontWeight="Bold"/>
+                <TextBox Text="{Binding ActiveQuestion.IncorrectAnswers[0]}"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Second Incorrect Answer:"
+                 FontWeight="Bold"/>
+                <TextBox Text="{Binding ActiveQuestion.IncorrectAnswers[1]}"/>
+            </StackPanel>
+
+            <StackPanel>
+                <Label Content="Third Incorrect Answer:"
+                 FontWeight="Bold"/>
+                <TextBox Text="{Binding ActiveQuestion.IncorrectAnswers[2]}"/>
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

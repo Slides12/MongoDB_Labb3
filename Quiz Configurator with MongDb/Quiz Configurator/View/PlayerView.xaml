@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="Quiz_Configurator.View.PlayerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Quiz_Configurator.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    
+    <!--Hide button hover-->
+    <UserControl.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        BorderThickness="1"
+                        Padding="4,2" 
+                        BorderBrush="DarkGray" 
+                        CornerRadius="3" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <!--Question-->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+        <TextBlock Text="{Binding PlayerViewModel.Query}" FontSize="35" TextWrapping="Wrap" Padding="30 0 30 10" TextAlignment="Center"/>
+            <TextBlock FontSize="20" TextAlignment="Center">
+                <Run Text="Question" />
+                <Run Text="{Binding PlayerViewModel.Index}" />
+                <Run Text="of" />
+                <Run Text="{Binding PlayerViewModel.CurrentAmountOfQuestions}" />
+            </TextBlock>
+        </StackPanel>
+
+
+        <!--Answers-->
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right">
+                <Button Width="220" Height="80"
+                        Margin="10"
+                        Background="{Binding PlayerViewModel.QuestionColor1}"
+                        Style="{StaticResource MyButtonStyle}"
+                        Command="{Binding PlayerViewModel.CheckButtonCommand1}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Text="{Binding PlayerViewModel.Question1}"
+                           Width="200"
+                           Height="70"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+            <Button Width="220" Height="80"
+                        Margin="10"
+                    Background="{Binding PlayerViewModel.QuestionColor2}"
+                    Style="{StaticResource MyButtonStyle}"
+                        Command="{Binding PlayerViewModel.CheckButtonCommand2}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Text="{Binding PlayerViewModel.Question2}"
+                           Width="200"
+                           Height="70"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" 
+                    HorizontalAlignment="Left">
+            
+                <Button Width="220" Height="80"
+                        Margin="10"
+                        Background="{Binding PlayerViewModel.QuestionColor3}"
+                        Style="{StaticResource MyButtonStyle}"
+                        Command="{Binding PlayerViewModel.CheckButtonCommand3}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Text="{Binding PlayerViewModel.Question3}"
+                           Width="200"
+                           Height="70"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+            
+                <Button Width="220" Height="80"
+                        Margin="10"
+                        Background="{Binding PlayerViewModel.QuestionColor4}"
+                        Style="{StaticResource MyButtonStyle}"
+                        Command="{Binding PlayerViewModel.CheckButtonCommand4}"
+                        CommandParameter="{Binding RelativeSource={RelativeSource Self}}">
+                <TextBlock Text="{Binding PlayerViewModel.Question4}"
+                           Width="200"
+                           Height="70"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+        </StackPanel>
+
+        <!--Timer-->
+        <Label Content="{Binding PlayerViewModel.Seconds, 
+                                 UpdateSourceTrigger=PropertyChanged}" 
+               FontWeight="Bold" 
+               FontSize="30" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Top" 
+               Grid.Column="1"
+               Margin="20"/>
+
+    </Grid>
+</UserControl>
