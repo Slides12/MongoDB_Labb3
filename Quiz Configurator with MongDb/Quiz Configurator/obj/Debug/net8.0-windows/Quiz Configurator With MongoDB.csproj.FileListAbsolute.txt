@@ -58,3 +58,7 @@ C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Co
 C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\SharpCompress.dll
 C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\Snappier.dll
 C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\AddCategoryDialog.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\AddCategoryDialog.baml
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\RemoveCategoryDialog.g.cs
+C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\obj\Debug\net8.0-windows\Windows\RemoveCategoryDialog.baml

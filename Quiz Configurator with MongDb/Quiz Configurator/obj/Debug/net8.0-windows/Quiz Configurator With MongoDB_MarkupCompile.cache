@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Daniel\source\repos\MongoDB_Labb3\Quiz Configurator with MongDb\Quiz Configurator\App.xaml
-10-1534071947
+121648718827
 
-2980494478
+321397103377
 224-1492253325
-MainWindow.xaml;View\ConfigurationView.xaml;View\EndScreen.xaml;View\HighscoreView.xaml;View\MenuView.xaml;View\PlayerView.xaml;View\UserNameView.xaml;Windows\CreateNewPackDialog.xaml;Windows\ImportQuestions.xaml;Windows\PackOptionsDialog.xaml;
+MainWindow.xaml;View\ConfigurationView.xaml;View\EndScreen.xaml;View\HighscoreView.xaml;View\MenuView.xaml;View\PlayerView.xaml;View\UserNameView.xaml;Windows\AddCategoryDialog.xaml;Windows\CreateNewPackDialog.xaml;Windows\ImportQuestions.xaml;Windows\PackOptionsDialog.xaml;Windows\RemoveCategoryDialog.xaml;
 
 False
 

@@ -25,6 +25,9 @@
     <Compile Update="View\UserNameView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\AddCategoryDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\CreateNewPackDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\PackOptionsDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\RemoveCategoryDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -57,6 +63,9 @@
     <Page Update="View\UserNameView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Windows\AddCategoryDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Windows\CreateNewPackDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -64,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Windows\PackOptionsDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\RemoveCategoryDialog.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

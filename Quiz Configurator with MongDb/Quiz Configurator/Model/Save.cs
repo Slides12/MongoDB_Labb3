@@ -49,13 +49,30 @@ namespace Quiz_Configurator.Model
                     { "_id", pack._id },
                     { "Name", pack.Name },
                     { "Difficulty", pack.Difficulty },
+                    { "TimeLimitInSeconds", pack.TimeLimitInSeconds },
+                    { "Category", pack.Category },
                     { "Questions", questionArray }
                 };
 
 
                 var filter = Builders<BsonDocument>.Filter.Eq("_id", pack._id);
-                var options = new ReplaceOptions { IsUpsert = true };
-                await packCollection.ReplaceOneAsync(filter, doc, options);
+                var existingDocument = await packCollection.Find(filter).FirstOrDefaultAsync();
+
+                if (existingDocument != null)
+                {
+                    var updateDefinition = Builders<BsonDocument>.Update
+                        .Set("Name", pack.Name)
+                        .Set("Difficulty", pack.Difficulty)
+                        .Set("TimeLimitInSeconds", pack.TimeLimitInSeconds)
+                        .Set("Category", pack.Category)
+                        .Set("Questions", questionArray);
+
+                    await packCollection.UpdateOneAsync(filter, updateDefinition);
+                }
+                else
+                {
+                    await packCollection.InsertOneAsync(doc);
+                }
             }
         }
     }

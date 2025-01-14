@@ -38,6 +38,7 @@ namespace Quiz_Configurator.Model
                 var qp = new QuestionPackViewModel() { 
                     _id = new ObjectId(bsonDoc.GetValue("_id").ToString()), 
                     Difficulty = Enum.Parse<Difficulty>(bsonDoc.GetValue("Difficulty").ToString()),
+                    Category = bsonDoc.GetValue("Category").ToString(),
                     Name = bsonDoc.GetValue("Name").ToString(),
                 };
 

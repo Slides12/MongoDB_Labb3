@@ -14,12 +14,15 @@ namespace Quiz_Configurator.Viewmodel
     class MainWindowViewModel : ViewModelBase
     {
         public ObservableCollection<QuestionPackViewModel> Packs { get; set; }
+        public ObservableCollection<string> Categories { get; set; }
         public PlayerViewModel PlayerViewModel { get; }
         public ConfigurationViewModel ConfigurationViewModel { get; }
 
         public Save save;
         public Load load;
         public Import import;
+        public MongoDBCategory mongoDbFillDB;
+
 
         public DelegateCommand NewPackCommand { get; }
         public DelegateCommand SetActivePackCommand { get; }
@@ -213,6 +216,22 @@ namespace Quiz_Configurator.Viewmodel
             }
         }
 
+        private string _packCategory;
+        public string PackCategory
+        {
+            get
+            {
+                return _packCategory;
+            }
+            set
+            {
+                _packCategory = value;
+
+                RaiseProperyChanged("PackCategory");
+            }
+        }
+
+
         private string _packName = "<PackName>";
         public string PackName
         {
@@ -248,6 +267,8 @@ namespace Quiz_Configurator.Viewmodel
             load = new Load();
             save = new Save();
             import = new Import();
+            UpdateMongDBCategories();
+            InitializeCategoriesAsync();
             GetCategorys();
             LoadAsync();
 
@@ -402,7 +423,7 @@ namespace Quiz_Configurator.Viewmodel
 
             if (result == true)
             {
-                QuestionPackViewModel qp = new QuestionPackViewModel(new QuestionPack(PackName, PackDifficulty, PackTimeLimit));
+                QuestionPackViewModel qp = new QuestionPackViewModel(new QuestionPack(PackName, PackDifficulty, PackCategory , PackTimeLimit));
                 ActivePack = qp;
                 ConfigurationViewModel.Difficulty = ActivePack.Difficulty;
                 Packs.Add(qp);
@@ -506,6 +527,16 @@ namespace Quiz_Configurator.Viewmodel
                 }
 
             }
+        }
+
+        public async void InitializeCategoriesAsync()
+        {
+            Categories = await MongoDBCategory.GetCategorysFromMongoDBAsync();
+        }
+
+        public async void UpdateMongDBCategories()
+        {
+            await MongoDBCategory.AddCategorysToMongoDBAsync();
         }
 
     }

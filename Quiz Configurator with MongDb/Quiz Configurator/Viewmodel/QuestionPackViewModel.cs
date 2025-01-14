@@ -40,6 +40,17 @@ namespace Quiz_Configurator.Viewmodel
             }
         }
 
+        public string Category
+        {
+            get => _model.Category;
+            set
+            {
+                _model.Category = value;
+                RaiseProperyChanged();
+            }
+        }
+
+
         public int TimeLimitInSeconds
         {
             get => _model.TimeLimitInSeconds;

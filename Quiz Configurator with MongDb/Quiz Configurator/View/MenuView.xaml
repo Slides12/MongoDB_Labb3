@@ -86,21 +86,32 @@
                               Icon="{fa:Icon plus}"
                               Command="{Binding ConfigurationViewModel.NewQuestionCommand}"/>
 
+                <MenuItem x:Name="addCategoryMenu" 
+                        Header="Add _Category" 
+                          InputGestureText="Add"
+                              Icon="{fa:Icon plus}"
+                              Command="{Binding ConfigurationViewModel.NewCategoryCommand}"/>
 
-                    <MenuItem x:Name="removeQuestionMenu"
+
+                <MenuItem x:Name="removeQuestionMenu"
                         Header="_Remove Question"
                           InputGestureText="Delete"
                               Icon="{fa:Icon minus}"
                               Command="{Binding ConfigurationViewModel.DeleteQuestionCommand}"/>
+                
+                    <MenuItem x:Name="removeCategoryMenu"
+                        Header="Remove Categor_y"
+                          InputGestureText="Delete"
+                              Icon="{fa:Icon minus}"
+                              Command="{Binding ConfigurationViewModel.DeleteCategoryCommand}"/>
 
-
-                    <MenuItem x:Name="packOptionsMenu" 
+                <MenuItem x:Name="packOptionsMenu" 
                         Header="Pack _Options" 
                           InputGestureText="Ctrl+O"
                       Icon="{fa:Icon toolbox}"
                               Command="{Binding ConfigurationViewModel.PackOptionsCommand}"/>
 
-
+                
                 </MenuItem>
 
 

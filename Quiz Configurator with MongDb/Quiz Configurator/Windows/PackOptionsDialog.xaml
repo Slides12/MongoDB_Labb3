@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Quiz_Configurator.Model"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="Pack Options" Height="200" Width="200" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner">
+        Title="Pack Options" Height="230" Width="200" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner">
 
     <Window.Resources>
         <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type sys:Enum}" x:Key="DifficultyEnumProvider">
@@ -25,6 +25,12 @@
             <ComboBox x:Name="comboBox"
                       ItemsSource="{Binding Source={StaticResource DifficultyEnumProvider}}"
                       SelectedItem="{Binding ActivePack.Difficulty, Mode=TwoWay}" />
+
+            <Label Content="Category:" FontWeight="Bold"/>
+            <ComboBox x:Name="CategoryComboBox" 
+                      ItemsSource="{Binding Categories}"
+                      SelectedIndex="1"
+                      SelectedItem="{Binding ActivePack.Category, Mode=TwoWay}"/>  
 
             <DockPanel>
                 <Label Content="Time Limit:" FontWeight="Bold"/>
