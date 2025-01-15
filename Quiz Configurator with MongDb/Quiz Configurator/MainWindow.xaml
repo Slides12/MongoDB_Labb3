@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Quiz Configurator" Height="500" Width="800" MinHeight="450" MinWidth="700" Icon="/Assets/icon.ico" Background="GhostWhite">
     <Window.InputBindings>
-        <KeyBinding Key="P" Modifiers="Ctrl" Command="{Binding SetPlayerViewCommand}"/>
+        <KeyBinding Key="P" Modifiers="Ctrl" Command="{Binding SetUserNameViewCommand}"/>
         <KeyBinding Key="E" Modifiers="Ctrl" Command="{Binding SetConfigViewCommand}"/>
         <KeyBinding Key="H" Modifiers="Ctrl" Command="{Binding SetConfigViewCommand}"/>
         <KeyBinding Key="Insert"  Command="{Binding ConfigurationViewModel.NewQuestionCommand}"/>
@@ -42,8 +42,8 @@
         <view:PlayerView Grid.Row="1" Visibility="{Binding PlayerVisibility}"/>
 
         <view:EndScreenView Grid.Row="1" Visibility="{Binding EndScreenVisibility}"/>
-        
-        <!--<view:UserNameView Grid.Row="1" />-->
+
+        <view:UserNameView Grid.Row="1" Visibility="{Binding UserNameVisibility}"/>
 
 
 

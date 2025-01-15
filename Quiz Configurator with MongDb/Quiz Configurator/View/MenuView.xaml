@@ -122,7 +122,7 @@
                     <MenuItem x:Name="playMenu" 
                         Header="_Play" 
                           InputGestureText="Ctrl+P"
-                              Command="{Binding SetPlayerViewCommand}"
+                              Command="{Binding SetUserNameViewCommand}"
                               Icon="{fa:Icon play}"/> 
 
 

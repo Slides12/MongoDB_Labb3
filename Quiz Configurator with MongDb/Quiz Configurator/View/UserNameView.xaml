@@ -8,24 +8,37 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <StackPanel VerticalAlignment="Center">
-            
-            <TextBox Height="70"
+            <Label Content="What’s your name, player?" 
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   FontWeight="Bold"/>
+
+            <TextBox Height="40"
                      Width="300"
-                     VerticalAlignment="Bottom"/>
+                     VerticalAlignment="Bottom"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     FontSize="20"
+                     Text="{Binding HighscoreViewModel.PlayerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                     />
 
             <StackPanel VerticalAlignment="Bottom" 
                         HorizontalAlignment="Center"
                         Orientation="Horizontal">
 
                 <Button Content="Ok" 
-                        Height="40" 
+                        Height="20" 
                         Width="100"
-                        Margin="5"/>
+                        Margin="5"
+                        FontWeight="Bold"
+                        Command="{Binding SetPlayerViewCommand}"/>
         
                 <Button Content="Cancel" 
-                        Height="40" 
+                        Height="20" 
                         Width="100"
-                        Margin="5"/>        
+                        Margin="5"
+                        FontWeight="Bold"
+                        Command="{Binding SetConfigViewCommand}"/>        
             </StackPanel>
         </StackPanel>
     </Grid>

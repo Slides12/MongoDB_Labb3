@@ -17,6 +17,7 @@ namespace Quiz_Configurator.Viewmodel
         public ObservableCollection<string> Categories { get; set; }
         public PlayerViewModel PlayerViewModel { get; }
         public ConfigurationViewModel ConfigurationViewModel { get; }
+        public HighscoreViewModel HighscoreViewModel { get; }
 
         public Save save;
         public Load load;
@@ -36,6 +37,7 @@ namespace Quiz_Configurator.Viewmodel
 
 
         public DelegateCommand SetPlayerViewCommand { get; }
+        public DelegateCommand SetUserNameViewCommand { get; }
         public DelegateCommand SetConfigViewCommand { get; }
 
 
@@ -166,6 +168,21 @@ namespace Quiz_Configurator.Viewmodel
             }
         }
 
+        private Visibility _userNameScreenVisibility;
+        public Visibility UserNameVisibility
+        {
+            get
+            {
+                return _userNameScreenVisibility;
+            }
+            set
+            {
+                _userNameScreenVisibility = value;
+
+                RaiseProperyChanged("PlayerVisibility");
+            }
+        }
+
         private Visibility _configVisibility;
         public Visibility ConfigVisibility
         {
@@ -277,7 +294,8 @@ namespace Quiz_Configurator.Viewmodel
             NewPackCommand = new DelegateCommand(AddPack, CanPlay);
             SetActivePackCommand = new DelegateCommand(SetActivePack, CanPlay);
             DeletePackCommand = new DelegateCommand(DeleteActivePack, CanPlay);
-            SetPlayerViewCommand = new DelegateCommand(SetPlayerView, CanPlay);
+            SetPlayerViewCommand = new DelegateCommand(SetPlayerView, HasInputPlayerName);
+            SetUserNameViewCommand = new DelegateCommand(SetUserNameView, CanPlay);
             SetConfigViewCommand = new DelegateCommand(SetConfigView);
             FullscreenCommand = new DelegateCommand(SetFullscreen);
 
@@ -289,6 +307,7 @@ namespace Quiz_Configurator.Viewmodel
             ConfigVisibility = Visibility.Visible;
             PlayerVisibility = Visibility.Hidden;
             EndScreenVisibility = Visibility.Hidden;
+            UserNameVisibility = Visibility.Hidden;
 
 
 
@@ -296,10 +315,14 @@ namespace Quiz_Configurator.Viewmodel
 
             PlayerViewModel = new PlayerViewModel(this);
             ConfigurationViewModel = new ConfigurationViewModel(this);
+            HighscoreViewModel = new HighscoreViewModel(this);
         }
 
 
         public bool CanPlay(object? arg) => PlayActive == false;
+
+        public bool HasInputPlayerName(object? arg) => HighscoreViewModel.PlayerName.Length > 0;
+
 
 
 
@@ -353,6 +376,7 @@ namespace Quiz_Configurator.Viewmodel
         {
             ConfigVisibility = Visibility.Visible;
             PlayerVisibility = Visibility.Hidden;
+            UserNameVisibility = Visibility.Hidden;
             EndScreenVisibility = Visibility.Hidden;
             PlayerViewModel.StopTimer();
             PlayActive = false;
@@ -360,6 +384,23 @@ namespace Quiz_Configurator.Viewmodel
 
             RaiseProperyChanged(nameof(ConfigVisibility));
             RaiseProperyChanged(nameof(PlayerVisibility));
+            RaiseProperyChanged(nameof(UserNameVisibility));
+            RaiseProperyChanged(nameof(EndScreenVisibility));
+        }
+
+        private void SetUserNameView(object obj)
+        {
+            ConfigVisibility = Visibility.Hidden;
+            PlayerVisibility = Visibility.Hidden;
+            UserNameVisibility = Visibility.Visible;
+            EndScreenVisibility = Visibility.Hidden;
+            PlayerViewModel.StopTimer();
+            PlayActive = false;
+            save.SaveData(Packs);
+
+            RaiseProperyChanged(nameof(ConfigVisibility));
+            RaiseProperyChanged(nameof(PlayerVisibility));
+            RaiseProperyChanged(nameof(UserNameVisibility));
             RaiseProperyChanged(nameof(EndScreenVisibility));
         }
 
@@ -371,12 +412,15 @@ namespace Quiz_Configurator.Viewmodel
                 if (ActivePack.Questions.Count > 0) { 
                 ConfigVisibility = Visibility.Hidden;
                 PlayerVisibility = Visibility.Visible;
+                UserNameVisibility = Visibility.Hidden;
                 EndScreenVisibility = Visibility.Hidden;
                 PlayerViewModel.CurrentAmountOfQuestions = ActivePack.Questions.Count();
+                MongoDBHighscore.AddPlayerToMongoDB(HighscoreViewModel.PlayerName);
                 PlayerViewModel.StartGame();
             
                 RaiseProperyChanged(nameof(ConfigVisibility));
                 RaiseProperyChanged(nameof(PlayerVisibility));
+                RaiseProperyChanged(nameof(UserNameVisibility));
                 RaiseProperyChanged(nameof(EndScreenVisibility));
                 }
                 else
@@ -394,12 +438,14 @@ namespace Quiz_Configurator.Viewmodel
         {
             ConfigVisibility = Visibility.Hidden;
             PlayerVisibility = Visibility.Hidden;
+            UserNameVisibility = Visibility.Hidden;
             EndScreenVisibility = Visibility.Visible;
             PlayerViewModel.CurrentAmountOfQuestions = ActivePack.Questions.Count();
             PlayerViewModel.StopTimer();
 
             RaiseProperyChanged(nameof(ConfigVisibility));
             RaiseProperyChanged(nameof(PlayerVisibility));
+            RaiseProperyChanged(nameof(UserNameVisibility));
             RaiseProperyChanged(nameof(EndScreenVisibility));
         }
 
